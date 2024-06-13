@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="codeeditor.css">
+    <title>example page</title>
+</head>
+<body>
+    <div class="container">
+        <header class="nav">
+            <section class="logo">
+                <h1>ProPySolver</h1>
+            </section>
+        </header>
+        <main class="main-sec">
+            <div class="left">
+                <div class="left-con">
+                    <div class="box">
+                        <div class="nav_container">
+                            <button id="problem" class="btn1 active" onclick="Problems()">Problem</button>
+                            <button id="pybot" class="btn2" onclick="Pybot()">Pyplot</button>
+                            <button id="run" class="btn3" onclick="RunTestcases()">Run Testcases</button>
+                        </div>
+                        <div class="box-login" id="Problems">
+                            <h1 id="heading">Question Name</h1>
+                            <div class="prom-btn">
+                            </div>
+                            <div class="prom-btn1">
+
+                            </div>
+                        </div>
+                        <div class="box-register" id="Pybot">
+                            <div class="pycon">
+                            </div>
+                        </div>
+                        <div class="box-code" id="RunTestcases">
+                            <div class="in">
+                                <div class="child"><h1>Input</h1></div>
+                                <div class="child"><h1>EXPECTED</h1></div>
+                            </div>
+                            <div class="out">
+                                <h1>OUTPUT</h1>
+                            </div>
+                        </div>
+                        <!-- <div class="switch">
+                            <div id="problem" class="btn1"><a href="#" class="login active" onclick="Problems()">Problem</a></div>
+                            <div id="pybot" class="btn2"><a href="#" class="register" onclick="Pybot()">Pybot</a></div>
+                            <div id="run" class="btn3"><a href="#" class="addCode" onclick="RunTestcases()">Run Testcases</a></div>
+                            <div class="btn-active" id="btn"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="codedi">
+
+                </div>
+                <div class="button">
+                    <button class="btn">Submit</button>
+                    <button class="btn">Run</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        var ProblemsDiv = document.getElementById('Problems');
+        var PybotDiv = document.getElementById('Pybot');
+        var RunTestcasesDiv = document.getElementById('RunTestcases');
+        let problem = document.getElementById('problem');
+        let pybot = document.getElementById('pybot');
+        let run = document.getElementById('run');
+
+
+
+        function Problems() {
+            ProblemsDiv.style.display = "block";
+            PybotDiv.style.display = "none";
+            RunTestcasesDiv.style.display = "none";
+            // btn.style.left = "0px";
+            problem.classList.add("color");
+            pybot.classList.remove("color");
+            run.classList.remove("color");
+        }
+
+        function Pybot() {
+            ProblemsDiv.style.display = "none";
+            PybotDiv.style.display = "block";
+            RunTestcasesDiv.style.display = "none";
+            // btn.style.left = "150px";
+            pybot.classList.add("color");
+            problem.classList.remove("color");
+            run.classList.remove("color");
+        }
+
+        function RunTestcases() {
+            ProblemsDiv.style.display = "none";
+            PybotDiv.style.display = "none";
+            RunTestcasesDiv.style.display = "block";
+            // btn.style.left = "300px";
+            run.classList.add("color");
+            problem.classList.remove("color");
+            pybot.classList.remove("color");
+        }
+
+        // Set initial state to show Problems and hide others
+        Problems();
+
+    </script>
+</body>
+</html>
